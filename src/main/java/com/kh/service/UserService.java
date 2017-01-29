@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import com.kh.domain.User;
 import com.kh.domain.WriteCsv;
 import java.io.File;
-import java.io.PrintStream;
 import java.nio.charset.Charset;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,10 +13,10 @@ import org.apache.commons.csv.CSVRecord;
 
 @Service
 public class UserService {
-	public List<User> userList = new LinkedList();
+	public List<User> userList = new LinkedList<User>();
 	  
 	UserService() {
-		File csvData = new File("/Users/kelseyhale/java-projects/eclipse-workspace/springwebapp/src/main/files/users.csv");
+		File csvData = new File("/Users/kelseyhale/java-projects/test-workspace/programmingtest/src/main/files/question1.csv");
 	    CSVFormat csvFileFormat = CSVFormat.DEFAULT.withHeader(new String[0]).withIgnoreSurroundingSpaces();
 	    try {
 	      CSVParser parser = CSVParser.parse(csvData, Charset.forName("UTF-8"), csvFileFormat);
@@ -39,6 +38,8 @@ public class UserService {
 	        user.setZip(zip);
 	        user.setIsActive(isActive);
 	        
+	        System.out.println(user.getFirstName());
+	        
 	        this.userList.add(user);
 	      }
 	    } catch (Exception e) {
@@ -48,6 +49,7 @@ public class UserService {
 	  }
 	  
 	  public List<User> findAll() {
+		  System.out.println(userList);
 	    return this.userList;
 	  }
 	  

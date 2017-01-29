@@ -1,0 +1,8 @@
+FirstName,LastName,Address,City,State,Zip,IsActive
+John,Doe,Collier's Street,Dallas,Texas,75182,TRUE
+Jane,Donovan,Cookies & Cream,Ft. Worth,Texas,75075,FALSE
+Harry,Potter,Cupboard under stairs,London,HI,83938,TRUE
+Ron,Weasley,The Burrow,London,CT,398374,TRUE
+Hermione,Granger,Muggle House,London,KY,98980,TRUE
+Draco,Malfoy,somwhere dark,Darkness,AL,98098,TRUE
+Voldy,Mort,Cave,Cave,IN,9878,TRUE
