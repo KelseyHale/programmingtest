@@ -11,12 +11,13 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
+
 @Service
 public class UserService {
 	public List<User> userList = new LinkedList<User>();
 	  
 	UserService() {
-		File csvData = new File("/Users/kelseyhale/java-projects/test-workspace/programmingtest/src/main/files/question1.csv");
+		File csvData = new File("../webapps/programmingtest/WEB-INF/classes/question1.csv");
 	    CSVFormat csvFileFormat = CSVFormat.DEFAULT.withHeader(new String[0]).withIgnoreSurroundingSpaces();
 	    try {
 	      CSVParser parser = CSVParser.parse(csvData, Charset.forName("UTF-8"), csvFileFormat);
