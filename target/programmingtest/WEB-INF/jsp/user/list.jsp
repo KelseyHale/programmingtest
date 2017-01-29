@@ -12,6 +12,9 @@
 
 </head>
 <script>
+$(document).ready( function () {
+    $('#userTable').DataTable();
+} );
 </script>
 
 <style>

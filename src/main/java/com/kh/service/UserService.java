@@ -59,7 +59,7 @@ public class UserService {
 	  }
 	  
 	  public void add(User user) {
-	    WriteCsv.appendToFile("/Users/kelseyhale/java-projects/eclipse-workspace/springwebapp/src/main/files/users.csv", user);
+	    WriteCsv.appendToFile("../webapps/programmingtest/WEB-INF/classes/question1.csv", user);
 	    this.userList.add(user);
 	  }
 }
