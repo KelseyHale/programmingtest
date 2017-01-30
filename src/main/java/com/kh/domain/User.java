@@ -7,7 +7,7 @@ public class User {
 	  String City;
 	  String State;
 	  String Zip;
-	  String IsActive;
+	  boolean IsActive;
 	  
 	  public String getFirstName()
 	  {
@@ -69,12 +69,12 @@ public class User {
 	    this.Zip = Zip;
 	  }
 	  
-	  public String getIsActive()
+	  public boolean getIsActive()
 	  {
 	    return this.IsActive;
 	  }
 	  
-	  public void setIsActive(String IsActive)
+	  public void setIsActive(boolean IsActive)
 	  {
 	    this.IsActive = IsActive;
 	  }

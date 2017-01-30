@@ -25,7 +25,7 @@ public class WriteCsv {
       userDataRecord.add(user.City);
       userDataRecord.add(user.State);
       userDataRecord.add(user.Zip);
-      userDataRecord.add(user.IsActive);
+      userDataRecord.add(String.valueOf(user.IsActive));
       
       fileWriter.write("\n");
       csvFilePrinter.printRecord(userDataRecord); return;

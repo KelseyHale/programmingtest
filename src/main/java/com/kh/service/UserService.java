@@ -37,7 +37,11 @@ public class UserService {
 	        user.setCity(city);
 	        user.setState(state);
 	        user.setZip(zip);
-	        user.setIsActive(isActive);
+	        if(isActive == "true") {
+	        	user.setIsActive(true);
+	        } else {
+	        	user.setIsActive(false);
+	        }
 	        
 	        System.out.println(user.getFirstName());
 	        

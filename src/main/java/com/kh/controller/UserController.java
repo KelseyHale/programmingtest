@@ -24,7 +24,12 @@ public class UserController {
 	
 	@RequestMapping(value={"/user/add"}, method={org.springframework.web.bind.annotation.RequestMethod.POST})
 	public String carAddSubmit(@ModelAttribute User user) {
-	  this.userService.add(user);
-	  return "redirect:/user/list";
+		if(user.getIsActive()) {
+			user.setIsActive(true);
+		} else {
+			user.setIsActive(false);
+		}
+		this.userService.add(user);
+		return "redirect:/user/list";
 	}
 }

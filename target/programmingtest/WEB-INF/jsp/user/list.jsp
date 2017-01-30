@@ -6,14 +6,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/af-2.1.3/cr-1.3.2/fh-3.1.2/r-2.1.0/sc-1.4.2/datatables.min.css"/>
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"/>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/af-2.1.3/cr-1.3.2/fh-3.1.2/r-2.1.0/sc-1.4.2/datatables.min.js"></script>
+
 
 </head>
 <script>
 $(document).ready( function () {
-    $('#userTable').DataTable();
+    $('#userTable').DataTable({
+        scrollY: 200,
+        deferRender: true,
+        scroller: true
+    });
 } );
 </script>
 
@@ -31,11 +38,14 @@ table thead tr:first-child {
 td {
 	padding: 10px;
 }
+.dataTables_filter {
+	margin: 5px;
+}
 </style>
 <body>
 
 	<h1>Users</h1>
-		<table id="userTable">
+		<table id="userTable" class="display">
 		<thead>
 			<tr>
 				<td>First Name</td>
