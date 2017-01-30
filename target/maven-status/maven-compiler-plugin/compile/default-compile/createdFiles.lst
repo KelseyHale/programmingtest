@@ -3,5 +3,4 @@ com/kh/domain/WriteCsv.class
 com/kh/controller/UserController.class
 com/kh/domain/User.class
 com/kh/service/UserService.class
-com/kh/controller/HelloController.class
 com/kh/config/AppConfig.class
